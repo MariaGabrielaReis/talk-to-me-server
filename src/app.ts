@@ -10,7 +10,7 @@ export class App {
   constructor() {
     this.app = express();
     this.http = new http.Server(this.app);
-    this.io = new Server(this.http);
+    this.io = new Server(this.http, { cors: { origin: "*" } });
   }
 
   public listen() {
