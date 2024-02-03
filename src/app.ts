@@ -26,14 +26,27 @@ export class App {
   private socketEvents(socket: Socket) {
     socket.on("subscribe", data => {
       socket.join(data.meetingId);
+      socket.join(data.socketId);
 
-      socket.on("chat", data =>
-        socket.broadcast.to(data.meetingId).emit("chat", {
-          text: data.text,
+      const meetingsSession = Array.from(socket.rooms);
+      if (meetingsSession.length > 0) {
+        socket.to(data.meetingId).emit("new user", {
+          socketId: socket.id,
           username: data.username,
-          time: data.time,
-        }),
-      );
+        });
+      }
     });
+
+    socket.on("new user connected", data =>
+      socket.to(data.to).emit("new user connected", { sender: data.sender }),
+    );
+
+    socket.on("chat", data =>
+      socket.broadcast.to(data.meetingId).emit("chat", {
+        text: data.text,
+        username: data.username,
+        time: data.time,
+      }),
+    );
   }
 }
