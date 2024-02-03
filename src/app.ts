@@ -38,7 +38,10 @@ export class App {
     });
 
     socket.on("new user connected", data =>
-      socket.to(data.to).emit("new user connected", { sender: data.sender }),
+      socket.to(data.to).emit("new user connected", {
+        sender: data.sender,
+        username: data.username,
+      }),
     );
 
     socket.on("sdp", data =>
