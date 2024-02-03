@@ -41,6 +41,20 @@ export class App {
       socket.to(data.to).emit("new user connected", { sender: data.sender }),
     );
 
+    socket.on("sdp", data =>
+      socket.to(data.to).emit("sdp", {
+        description: data.description,
+        sender: data.sender,
+      }),
+    );
+
+    socket.on("ice candidates", data =>
+      socket.to(data.to).emit("ice candidates", {
+        candidate: data.candidate,
+        sender: data.sender,
+      }),
+    );
+
     socket.on("chat", data =>
       socket.broadcast.to(data.meetingId).emit("chat", {
         text: data.text,
