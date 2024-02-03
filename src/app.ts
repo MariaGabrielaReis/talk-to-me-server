@@ -55,6 +55,8 @@ export class App {
       }),
     );
 
+    socket.on("disconnect", () => socket.disconnect());
+
     socket.on("chat", data =>
       socket.broadcast.to(data.meetingId).emit("chat", {
         text: data.text,
