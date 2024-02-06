@@ -1,4 +1,4 @@
-# Talk to Me! [![license](https://img.shields.io/badge/LICENCE-MIT-blue)]() [![status](https://img.shields.io/badge/STATUS-DOING-yellow)]()
+# Talk to Me! [![license](https://img.shields.io/badge/LICENCE-MIT-blue)]() [![status](https://img.shields.io/badge/STATUS-DONE-brightgreen)]()
 
 > Application developed in "Semana do Herói #03" event, promoted by Hero to Code 🚀 <br>
 
@@ -10,18 +10,18 @@
 - [x] Create meeting
 - [x] Join meeting
 - [x] Send text messages (chat)
-- [ ] See others participants
+- [x] See others participants
 </details>
 
 > [!TIP]
 > Visit [demo]() or the others repositories of this project:
->
+> 
 > - **Frontend**: [@MariaGabrielaReis/talk-to-me-web](https://github.com/MariaGabrielaReis/talk-to-me-web) - `Next, Typescript, TailwindCSS, Socket.io`
 
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) ![Socket.io](https://img.shields.io/badge/Socket.io-black?style=for-the-badge&logo=socket.io&badgeColor=010101)
 
 <div align="center">
-  <img alt="Talk to Me!" src="" />
+  <img alt="Talk to Me!" src="https://github.com/MariaGabrielaReis/talk-to-me-server/assets/69374340/06c94ab5-ccbf-4647-89c5-0c4ba1e4050c" />
 </div>
 
 ## Building and running locally
